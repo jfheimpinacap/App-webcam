@@ -1,0 +1,81 @@
+# Operating systems
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editors and IDEs (keep shared configuration explicit)
+.idea/
+*.iml
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.swp
+*~
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python caches, environments, builds and packaging
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+build/
+dist/
+*.egg-info/
+*.spec
+*.build/
+*.dist/
+*.onefile-build/
+
+# Android, Gradle and local Android Studio state
+.gradle/
+**/.gradle/
+**/build/
+local.properties
+.cxx/
+captures/
+*.apk
+*.aab
+
+# C/C++ and Windows build artifacts
+CMakeFiles/
+CMakeCache.txt
+cmake-build-*/
+out/
+Debug/
+Release/
+*.obj
+*.pdb
+*.ilk
+*.exe
+*.dll
+*.lib
+
+# Logs, generated test media and temporary streams
+*.log
+logs/
+test-output/
+recordings/
+screenshots/
+streams/
+*.h264
+*.yuv
+*.raw
+*.mp4
+*.mkv
+
+# Packaging artifacts
+packages/
+installers/
+*.msi
+*.msix
+*.zip
