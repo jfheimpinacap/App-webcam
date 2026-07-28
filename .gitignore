@@ -43,6 +43,8 @@ dist/
 local.properties
 .cxx/
 captures/
+*.jks
+*.keystore
 *.apk
 *.aab
 

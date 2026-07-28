@@ -2,12 +2,12 @@
 
 Esta planificación es provisional y ajustable según las capacidades y resultados obtenidos con los dispositivos reales, el PC, la conexión y los codificadores y decodificadores disponibles.
 
-**Tarea actual: Prompt 001 — Inicializar y documentar el repositorio.** Este estado no afirma integración en GitHub, disponibilidad local para el usuario, validación funcional, PR ni Merge.
+**Tarea actual: Prompt 002 — Crear la base de Android.** La implementación está en el workspace de Codex y aún no implica integración en GitHub, validación en Android Studio, compilación ni ejecución. Según la confirmación del usuario, Prompt 001 ya fue integrado, sincronizado y validado.
 
 ## Fase 1 — Fundaciones y viabilidad técnica
 
-1. **Prompt 001 (actual):** Inicializar y documentar el repositorio.
-2. **Prompt 002:** Crear la base de Android.
+1. **Prompt 001 (integrado):** Inicializar y documentar el repositorio; integrado, sincronizado y validado según la confirmación del usuario.
+2. **Prompt 002 (implementado en el workspace):** Crear la base de Android; pendiente de revisión e integración y de validación funcional local.
 3. **Prompt 003:** Investigar capacidades de cámara.
 4. **Prompt 004:** Implementar vista previa Android.
 5. **Prompt 005:** Crear perfiles de calidad.

@@ -1,6 +1,6 @@
 # App-webcam
 
-> **Estado:** fase de fundaciones y documentación. Todavía no existe una versión funcional, instalable ni ejecutable.
+> **Estado:** base Android inicial implementada en el workspace de Prompt 002; su validación funcional permanece pendiente.
 
 App-webcam busca permitir que un teléfono Android funcione como webcam para un PC con Windows mediante una conexión local USB o Wi-Fi. El MVP usará OBS y OBS Virtual Camera como puente hacia aplicaciones como Discord; una cámara virtual propia queda reservada para una etapa posterior.
 
@@ -46,12 +46,19 @@ No se fija todavía una versión de Python: se elegirá tras comprobar la compat
 
 Las resoluciones, FPS y funciones disponibles se detectarán en tiempo de ejecución. El soporte real dependerá del hardware, software, conexión y resultados de pruebas posteriores.
 
+## Base Android inicial
+
+El directorio [`android-app/`](android-app/) contiene una única aplicación Android creada con Kotlin, Jetpack Compose y Material 3. La pantalla disponible es estática y comunica explícitamente que la cámara aún no está configurada; todavía no existen captura ni transmisión de video.
+
+La apertura en Android Studio, la sincronización de Gradle, la compilación y la ejecución se validarán localmente después del flujo de revisión, PR, Merge y Sync. Esta incorporación al workspace no implica que esas comprobaciones ya hayan sido realizadas.
+
 ## Limitaciones actuales
 
-Este repositorio contiene únicamente la estructura documental inicial. No hay captura, transmisión, decodificación, interfaz funcional, integración con OBS ni cámara virtual implementadas. Tampoco se ofrecen instrucciones de instalación o ejecución porque todavía no existe software que instalar o ejecutar.
+El repositorio contiene una base de interfaz Android, pero no hay captura, transmisión, decodificación, integración con OBS ni cámara virtual implementadas. Tampoco se ofrecen instrucciones de instalación o ejecución validadas porque la base aún debe pasar por el flujo y las comprobaciones locales descritas.
 
 ## Documentación
 
 - [Arquitectura conceptual](docs/architecture.md)
 - [Hoja de ruta provisional](docs/roadmap.md)
 - [Flujo de desarrollo e integración](docs/development-workflow.md)
+- [Fundación técnica Android](docs/android-foundation.md)
