@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">App Webcam</string>
+    <string name="initial_status">Base Android inicial</string>
+    <string name="next_stages_description">La captura y conexión de cámara se incorporarán en las siguientes etapas.</string>
+    <string name="camera_not_configured">Cámara no configurada</string>
+</resources>
