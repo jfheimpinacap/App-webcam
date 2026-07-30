@@ -1,6 +1,6 @@
 # App-webcam
 
-> **Estado:** diagnóstico Camera2 de metadatos implementado para Prompt 003; pendiente de integración y validación local.
+> **Estado:** vista previa local y medición de captura del Prompt 004 implementadas; pendientes de integración y validación física.
 
 App-webcam busca permitir que un teléfono Android funcione como webcam para un PC con Windows mediante una conexión local USB o Wi-Fi. El MVP usará OBS y OBS Virtual Camera como puente hacia aplicaciones como Discord; una cámara virtual propia queda reservada para una etapa posterior.
 
@@ -46,15 +46,15 @@ No se fija todavía una versión de Python: se elegirá tras comprobar la compat
 
 Las resoluciones, FPS y funciones disponibles se detectarán en tiempo de ejecución. El soporte real dependerá del hardware, software, conexión y resultados de pruebas posteriores.
 
-## Diagnóstico Android actual
+## Aplicación Android actual
 
-El directorio [`android-app/`](android-app/) contiene una única aplicación Android creada con Kotlin, Jetpack Compose y Material 3. Su pantalla consulta mediante Camera2 los metadatos declarados de las cámaras, resoluciones y duraciones mínimas de frame, sin abrirlas ni solicitar permisos. Los indicadores de 720p30, 1080p30 y 1080p60 son evaluaciones prudentes, no compatibilidad funcional comprobada.
+El directorio [`android-app/`](android-app/) contiene una aplicación Kotlin/Compose. Con contexto previo solicita exclusivamente `CAMERA`, enumera las cámaras utilizables por CameraX y ofrece vista previa local para probar 720p30 y 1080p30. 1080p60 permanece exploratorio y solo se habilita preventivamente cuando los metadatos de la cámara alcanzan 60 FPS. `ImageAnalysis` informa resolución y FPS realmente entregados al analizador, separados de lo solicitado. El diagnóstico Camera2 previo continúa accesible.
 
 La apertura en Android Studio, la sincronización de Gradle, la compilación y la ejecución se validarán localmente después del flujo de revisión, PR, Merge y Sync. Esta incorporación al workspace no implica que esas comprobaciones ya hayan sido realizadas.
 
 ## Limitaciones actuales
 
-Todavía no hay vista previa, captura, grabación, transmisión, decodificación, integración con OBS ni cámara virtual implementadas. El diagnóstico no demuestra que una resolución y un rango FPS puedan utilizarse juntos; eso requerirá una sesión de captura y medición posterior.
+Una sesión aporta evidencia provisional solo para ese teléfono, cámara y momento. Todavía no existen grabación, audio, transmisión, aplicación Windows, decodificación, integración con OBS ni cámara virtual.
 
 ## Documentación
 
@@ -63,3 +63,4 @@ Todavía no hay vista previa, captura, grabación, transmisión, decodificación
 - [Flujo de desarrollo e integración](docs/development-workflow.md)
 - [Fundación técnica Android](docs/android-foundation.md)
 - [Diagnóstico de capacidades Camera2](docs/camera-capabilities.md)
+- [Validación de vista previa y captura](docs/camera-preview-validation.md)

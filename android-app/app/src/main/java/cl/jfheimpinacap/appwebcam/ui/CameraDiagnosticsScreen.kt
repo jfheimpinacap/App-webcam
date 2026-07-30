@@ -13,6 +13,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -30,6 +31,7 @@ import java.util.Locale
 fun CameraDiagnosticsScreen(
     state: DiagnosticState,
     onAnalyze: () -> Unit,
+    onBack: (() -> Unit)? = null,
     modifier: Modifier = Modifier,
 ) {
     Scaffold(modifier = modifier.fillMaxSize()) { innerPadding ->
@@ -40,6 +42,7 @@ fun CameraDiagnosticsScreen(
         ) {
             Text("App Webcam", style = MaterialTheme.typography.headlineLarge)
             Text("Investigación de capacidades Camera2", style = MaterialTheme.typography.titleLarge)
+            onBack?.let { callback -> OutlinedButton(onClick = callback) { Text("Volver a vista previa") } }
             Card(modifier = Modifier.fillMaxWidth()) {
                 Text(
                     "Aviso: estos datos son metadatos declarados por Android; no representan una prueba real de captura ni garantizan combinaciones de resolución y FPS.",
