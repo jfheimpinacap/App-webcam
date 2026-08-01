@@ -3,8 +3,9 @@
 
     <application>
         <activity
-            android:name=".ComposeTestActivity"
-            android:exported="false" />
+            android:name=".CameraDiagnosticsTestActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppWebcam" />
     </application>
 
 </manifest>
